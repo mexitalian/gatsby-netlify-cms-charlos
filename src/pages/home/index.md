@@ -5,6 +5,13 @@ headerImage:
   imageAlt: Creative Technologist & Full Stack Web Dev
 title: Carlo Marasco
 subtitle: Creative Technologist & Full Stack Web Dev
+links:
+  - linkText: LinkedIn
+    linkURL: 'https://www.linkedin.com/in/mexitalian/'
+  - linkText: Music Visuals
+    linkURL: 'https://www.instagram.com/howtovj/'
+  - linkText: GitHub
+    linkURL: 'https://github.com/mexitalian'
 upcomingMeetupHeading: Upcoming Meetup
 noUpcomingMeetupText: Details to be announced.
 mapsNote: Clicking the pin opens Google Maps in a new tab.

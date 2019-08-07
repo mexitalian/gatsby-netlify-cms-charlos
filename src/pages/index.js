@@ -15,9 +15,12 @@ const Header = ({ home }) => (
   <section className="header">
     <div className="header-container  container">
       {home.headerImage && <img className="header-image" src={home.headerImage.image} alt={home.headerImage.imageAlt} />}
-      <h3 className="header-tagline">
-        <span className="header-taglinePart">{home.title}</span>
-      </h3>
+      <div className="header-tagline-container">
+        <h3 className="header-tagline">
+          <span className="header-taglinePart">{home.title}</span>
+        </h3>
+        <h4 className="header-subheading">{home.subtitle}</h4>
+      </div>
     </div>
   </section>
 );
@@ -160,6 +163,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            subtitle
             formattedDate: date(formatString: "MMMM Do YYYY @ h:mm A")
             rawDate: date
             presenters {
@@ -184,6 +188,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            subtitle
             headerImage {
               image
               imageAlt

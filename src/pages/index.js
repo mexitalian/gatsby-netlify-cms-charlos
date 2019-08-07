@@ -10,20 +10,26 @@ import HeadshotPlaceholder from "../img/headshot-placeholder.svg";
 import CustomLink from "../components/CustomLink";
 import "../styles/home.scss";
 
+
+const Header = ({ home }) => (
+  <section className="header">
+    <div className="header-container  container">
+      {home.headerImage && <img className="header-image" src={home.headerImage.image} alt={home.headerImage.imageAlt} />}
+      <h3 className="header-tagline">
+        <span className="header-taglinePart">{home.title}</span>
+      </h3>
+    </div>
+  </section>
+);
+
+
 export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
   const presenters = upcomingMeetup && upcomingMeetup.presenters;
   const latitude = upcomingMeetup && parseFloat(upcomingMeetup.location.mapsLatitude);
   const longitude = upcomingMeetup && parseFloat(upcomingMeetup.location.mapsLongitude);
   return (
     <>
-      <section className="header">
-        <div className="header-container  container">
-          {home.headerImage && <img className="header-image" src={home.headerImage.image} alt={home.headerImage.imageAlt} />}
-          <h3 className="header-tagline">
-            <span className="header-taglinePart">{home.title}</span>
-          </h3>
-        </div>
-      </section>
+      <Header home={home} />
       <section className="upcomingMeetup  section">
         <div className="upcomingMeetup-container  container">
           <h2 className="upcomingMeetup-title">{home.upcomingMeetupHeading}</h2>

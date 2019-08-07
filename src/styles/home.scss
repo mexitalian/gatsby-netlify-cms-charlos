@@ -27,6 +27,7 @@
   &-image {
     height: 150px;
     margin-bottom: 30px;
+    border-radius: 50%;
 
     @include respond-to("small") {
       height: 200px;

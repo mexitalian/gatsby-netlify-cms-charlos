@@ -4,6 +4,7 @@ headerImage:
   image: /img/carlo-marasco-profile-photo-iconographic.jpg
   imageAlt: Creative Technologist & Full Stack Web Dev
 title: Carlo Marasco
+subtitle: Creative Technologist & Full Stack Web Dev
 upcomingMeetupHeading: Upcoming Meetup
 noUpcomingMeetupText: Details to be announced.
 mapsNote: Clicking the pin opens Google Maps in a new tab.

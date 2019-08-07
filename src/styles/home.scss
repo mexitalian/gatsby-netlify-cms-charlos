@@ -27,6 +27,7 @@
   &-image {
     height: 150px;
     margin-bottom: 30px;
+    border-radius: 50%; 
 
     @include respond-to("small") {
       height: 200px;
@@ -38,12 +39,9 @@
     }
   }
 
-  &-tagline {
-    @include xlarge-font();
-    color: $body-light;
+  &-tagline-container {
     width: 400px;
     text-align: center;
-    cursor: default;
 
     @include respond-to("small") {
       flex-basis: 430px;
@@ -57,9 +55,23 @@
     }
   }
 
+  &-tagline {
+    @include xlarge-font();
+    color: $body-light;
+    cursor: default;
+  }
+
   &-taglinePart {
     display: inline;
     @include title-link-border();
+  }
+
+  &-subheading {
+    @include medium-font();
+    display: inline;
+    color: $body-light;
+    text-align: center;
+    cursor: default;
   }
 }
 

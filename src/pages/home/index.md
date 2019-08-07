@@ -2,7 +2,7 @@
 templateKey: home-page
 headerImage:
   image: /img/carlo-marasco-profile-photo-iconographic.jpg
-  imageAlt: Carlo Marasco – Creative Technologist & Full Stack Web Dev
+  imageAlt: Carlo Marasco
 title: Creative Technologist & Full Stack Web Dev
 upcomingMeetupHeading: Upcoming Meetup
 noUpcomingMeetupText: Details to be announced.

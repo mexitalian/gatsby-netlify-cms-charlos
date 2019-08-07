@@ -2,8 +2,8 @@
 templateKey: home-page
 headerImage:
   image: /img/carlo-marasco-profile-photo-iconographic.jpg
-  imageAlt: Carlo Marasco
-title: Creative Technologist & Full Stack Web Dev
+  imageAlt: Creative Technologist & Full Stack Web Dev
+title: Carlo Marasco
 upcomingMeetupHeading: Upcoming Meetup
 noUpcomingMeetupText: Details to be announced.
 mapsNote: Clicking the pin opens Google Maps in a new tab.

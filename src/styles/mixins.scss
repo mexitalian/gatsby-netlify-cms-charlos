@@ -88,6 +88,16 @@ $breakpoints: (
   }
 }
 
+@mixin link-border-alt() {
+  border-bottom: 2px solid $highlight;
+  transition: all $transition-duration ease-in-out;
+
+  &:hover {
+      background-color: $highlight;
+      color: $sambucus;
+  }
+}
+
 @mixin title-link-border() {
   border-bottom: 3px solid $highlight;
 }

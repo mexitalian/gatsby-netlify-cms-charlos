@@ -12,6 +12,7 @@
   &-container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -20,17 +21,17 @@
 
     @include respond-to("small") {
       flex-direction: row;
-      justify-content: space-around;
     }
   }
 
   &-image {
     height: 150px;
     margin-bottom: 30px;
-    border-radius: 50%; 
+    border-radius: 50%;
 
     @include respond-to("small") {
       height: 200px;
+      margin-right: 30px;
       margin-bottom: 0;
     }
 
@@ -72,6 +73,29 @@
     color: $body-light;
     text-align: center;
     cursor: default;
+  }
+}
+
+.hero {
+  &-links {
+    display: flex;
+    justify-content: center;
+    flex-basis: 0;
+
+    @include respond-to("small") {
+      flex-basis: 100%;
+    }
+  }
+
+  &-linkItem {
+    margin: 5px 0.5rem;
+  }
+
+  &-link {
+    @include small-font();
+    @include link-border-alt();
+    font-weight: 400;
+    color: $snowy-mountain;
   }
 }
 
@@ -185,6 +209,7 @@
         height: 100%;
       }
     }
+
     &--second {
       background-color: $background-medium;
 

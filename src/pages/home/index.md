@@ -12,7 +12,7 @@ links:
     linkURL: 'https://github.com/mexitalian'
   - linkText: Audiovisual
     linkURL: 'https://www.instagram.com/howtovj/'
-upcomingMeetupHeading: Upcoming Meetup
+upcomingMeetupHeading: Testimonials
 noUpcomingMeetupText: Details to be announced.
 mapsNote: Clicking the pin opens Google Maps in a new tab.
 callToActions:

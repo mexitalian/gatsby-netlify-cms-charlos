@@ -66,9 +66,9 @@ presenters:
       An Artist at heart, he gives an elegant touch to his designs, 
       interactions, and animations.
 location:
-  mapsLatitude: 64.843779
-  mapsLink: 'https://goo.gl/maps/Rm6ihxVrZGK2'
-  mapsLongitude: -147.718189
-  name: Fairbanks Ice Museum
+  mapsLatitude: 52.4965892
+  mapsLink: 'https://goo.gl/maps/XArnkqMaKYVseQcLA'
+  mapsLongitude: 13.4108379
+  name: 'Kreuzberg, Berlin'
 ---
 

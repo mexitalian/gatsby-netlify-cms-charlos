@@ -8,10 +8,10 @@ subtitle: Creative Technologist & Full Stack Web Dev
 links:
   - linkText: LinkedIn
     linkURL: 'https://www.linkedin.com/in/mexitalian/'
-  - linkText: Music Visuals
-    linkURL: 'https://www.instagram.com/howtovj/'
   - linkText: GitHub
     linkURL: 'https://github.com/mexitalian'
+  - linkText: Audiovisual
+    linkURL: 'https://www.instagram.com/howtovj/'
 upcomingMeetupHeading: Upcoming Meetup
 noUpcomingMeetupText: Details to be announced.
 mapsNote: Clicking the pin opens Google Maps in a new tab.

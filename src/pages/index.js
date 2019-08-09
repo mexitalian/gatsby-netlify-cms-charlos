@@ -39,63 +39,66 @@ const Header = ({ home }) => (
 );
 
 
+const Testimonials = ({ home, testimonals = null }) => {
+  const presenters = testimonals && testimonals.presenters;
+  const latitude = testimonals && parseFloat(testimonals.location.mapsLatitude);
+  const longitude = testimonals && parseFloat(testimonals.location.mapsLongitude);
+  return (
+    <section className="upcomingMeetup  section">
+      <div className="upcomingMeetup-container  container">
+        <h2 className="upcomingMeetup-title">{home.upcomingMeetupHeading}</h2>
+        {testimonals ? (
+          <>
+            <p className="upcomingMeetup-detail  upcomingMeetup-detail--location">
+              <span className="upcomingMeetup-detailLabel">Currently living in: </span>
+              {testimonals.location.name}
+            </p>
+            {presenters.length > 0 && (
+              <div className="upcomingMeetup-presenters">
+                {presenters.map(presenter => (
+                  <div className="upcomingMeetup-presenter" key={presenter.text}>
+                    <img
+                      className="upcomingMeetup-presenterImage"
+                      src={presenter.image ? presenter.image : HeadshotPlaceholder}
+                      alt={presenter.image ? presenter.name : "Default headshot placeholder"}
+                    />
+                    <span className="upcomingMeetup-presenterName">{presenter.name}</span>
+                    <span className="upcomingMeetup-presenterPresentationTitle">
+                      {presenter.presentationTitle}
+                    </span>
+                    <p className="upcomingMeetup-presenterDescription">{presenter.text}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            <p className="upcomingMeetup-mapNote">{home.mapsNote}</p>
+            <div className="upcomingMeetup-mapWrapper">
+              <Map
+                isMarkerShown
+                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTxauB_VWpo0_8hWELlE3pN59uuHzxD-8&v=3.exp&libraries=geometry,drawing,places"
+                loadingElement={<div style={{ height: `100%` }} />}
+                containerElement={<div style={{ height: `100%` }} />}
+                mapElement={<div style={{ height: `100%` }} />}
+                link={testimonals.location.mapsLink}
+                latitude={latitude}
+                longitude={longitude}
+              />
+            </div>
+          </>
+        ) : (
+          <p className="upcomingMeetup-detail">{home.noUpcomingMeetupText}</p>
+        )}
+      </div>
+    </section>
+  )
+};
+
+
 export const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
-  const presenters = upcomingMeetup && upcomingMeetup.presenters;
-  const latitude = upcomingMeetup && parseFloat(upcomingMeetup.location.mapsLatitude);
-  const longitude = upcomingMeetup && parseFloat(upcomingMeetup.location.mapsLongitude);
   return (
     <>
       <Header home={home} />
-      <section className="upcomingMeetup  section">
-        <div className="upcomingMeetup-container  container">
-          <h2 className="upcomingMeetup-title">{home.upcomingMeetupHeading}</h2>
-          {upcomingMeetup ? (
-            <>
-              <p className="upcomingMeetup-detail  upcomingMeetup-detail--date">
-                <span className="upcomingMeetup-detailLabel">Date: </span>
-                {upcomingMeetup.formattedDate}
-              </p>
-              <p className="upcomingMeetup-detail  upcomingMeetup-detail--location">
-                <span className="upcomingMeetup-detailLabel">Location: </span>
-                {upcomingMeetup.location.name}
-              </p>
-              {presenters.length > 0 && (
-                <div className="upcomingMeetup-presenters">
-                  {presenters.map(presenter => (
-                    <div className="upcomingMeetup-presenter" key={presenter.text}>
-                      <img
-                        className="upcomingMeetup-presenterImage"
-                        src={presenter.image ? presenter.image : HeadshotPlaceholder}
-                        alt={presenter.image ? presenter.name : "Default headshot placeholder"}
-                      />
-                      <span className="upcomingMeetup-presenterName">{presenter.name}</span>
-                      <span className="upcomingMeetup-presenterPresentationTitle">
-                        {presenter.presentationTitle}
-                      </span>
-                      <p className="upcomingMeetup-presenterDescription">{presenter.text}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
-              <p className="upcomingMeetup-mapNote">{home.mapsNote}</p>
-              <div className="upcomingMeetup-mapWrapper">
-                <Map
-                  isMarkerShown
-                  googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTxauB_VWpo0_8hWELlE3pN59uuHzxD-8&v=3.exp&libraries=geometry,drawing,places"
-                  loadingElement={<div style={{ height: `100%` }} />}
-                  containerElement={<div style={{ height: `100%` }} />}
-                  mapElement={<div style={{ height: `100%` }} />}
-                  link={upcomingMeetup.location.mapsLink}
-                  latitude={latitude}
-                  longitude={longitude}
-                />
-              </div>
-            </>
-          ) : (
-            <p className="upcomingMeetup-detail">{home.noUpcomingMeetupText}</p>
-          )}
-        </div>
-      </section>
+      <Testimonials home={home} testimonals={upcomingMeetup} />
       <section className="ctaBlock">
         <CustomLink
           linkType={home.callToActions.firstCTA.linkType}

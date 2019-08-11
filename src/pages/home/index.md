@@ -27,10 +27,8 @@ callToActions:
     linkURL: 'mailto:contact@js-wakanda.org'
     subHeading: Want to present at an upcoming meetup? Contact us.
 seo:
-  browserTitle: JS Wakanda
-  description: >-
-    JavaScript meetup group in Wakanda where JavaScript developers get together
-    for presentations and to meet others in the community.
-  title: JavaScript Wakanda
+  browserTitle: "Carlo Marasco –\_Creative Developer & Full Stack Web Dev"
+  description: Software engineering with a passion for art and design.
+  title: Carlo Marasco
 ---
 

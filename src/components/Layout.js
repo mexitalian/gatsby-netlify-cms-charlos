@@ -25,6 +25,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
+            display
             logoImage {
               image
               imageAlt
@@ -45,6 +46,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
+            display
             logoImage {
               image
               imageAlt
@@ -62,3 +64,4 @@ export const query = graphql`
 `;
 
 export default TemplateWrapper;
+ 

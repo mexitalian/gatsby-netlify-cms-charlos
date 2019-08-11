@@ -1,5 +1,6 @@
 ---
 templateKey: footer
+display: false
 logoImage:
   image: /img/js-wakanda.png
   imageAlt: JavaScript Wakanda

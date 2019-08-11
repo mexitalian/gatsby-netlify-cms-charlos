@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Testimonials from "./Testimonials";
-import CTA from "./CTA";
+// import CTA from "./CTA";
 
 
 const HomePageTemplate = ({ home, upcomingMeetup = null }) => {

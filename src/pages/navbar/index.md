@@ -1,5 +1,6 @@
 ---
 templateKey: navbar
+display: false
 menuItems:
   - label: home
     linkType: internal

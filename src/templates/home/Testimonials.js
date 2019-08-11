@@ -47,7 +47,7 @@ const HomeMap = ({ note, location }) => {
             // add an adequate zoom level
           />
         </div>
-        <p className="upcomingMeetup-mapNote">{note}</p>
+        {/* <p className="upcomingMeetup-mapNote">{note}</p> */}
       </>
     );
   };

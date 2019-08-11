@@ -8,11 +8,11 @@ subtitle: Creative Technologist & Full Stack Web Dev
 links:
   - linkText: LinkedIn
     linkURL: 'https://www.linkedin.com/in/mexitalian/'
-  - linkText: Music Visuals
-    linkURL: 'https://www.instagram.com/howtovj/'
   - linkText: GitHub
     linkURL: 'https://github.com/mexitalian'
-upcomingMeetupHeading: Upcoming Meetup
+  - linkText: Audiovisual
+    linkURL: 'https://www.instagram.com/howtovj/'
+upcomingMeetupHeading: Testimonials
 noUpcomingMeetupText: Details to be announced.
 mapsNote: Clicking the pin opens Google Maps in a new tab.
 callToActions:
@@ -22,9 +22,9 @@ callToActions:
     linkURL: /meetups
     subHeading: Look at what topics were presented at past meetups.
   secondCTA:
-    heading: Volunteer to Present
+    heading: Let's talk
     linkType: external
-    linkURL: 'mailto:contact@js-wakanda.org'
+    linkURL: 'mailto:hello@charlos.co.uk'
     subHeading: Want to present at an upcoming meetup? Contact us.
 seo:
   browserTitle: JS Wakanda

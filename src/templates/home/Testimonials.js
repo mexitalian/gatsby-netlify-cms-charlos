@@ -54,7 +54,6 @@ const HomeMap = ({ note, location }) => {
 
 
 const Testimonials = ({ home, testimonials = {} }) => {
-  console.log(testimonials);
   const { presenters: peers = [] } = testimonials;
   return (
     <section className="upcomingMeetup  section">
@@ -71,7 +70,7 @@ const Testimonials = ({ home, testimonials = {} }) => {
             )}
             <p className="upcomingMeetup-detail  upcomingMeetup-detail--location">
               <span className="upcomingMeetup-detailLabel">Currently in: </span>
-              {testimonials.location.name}
+              {testimonials.location.name || ""}
             </p>
             <HomeMap note={home.mapsNote} location={testimonials.location} />
           </>

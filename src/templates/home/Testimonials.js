@@ -54,7 +54,7 @@ const HomeMap = ({ note, location }) => {
 
 
 const Testimonials = ({ home, testimonials = {} }) => {
-  const { presenters: peers = [] } = testimonials;
+  const { presenters: peers = [], location = { name: "" } } = testimonials;
   return (
     <section className="upcomingMeetup  section">
       <div className="upcomingMeetup-container  container">
@@ -70,9 +70,9 @@ const Testimonials = ({ home, testimonials = {} }) => {
             )}
             <p className="upcomingMeetup-detail  upcomingMeetup-detail--location">
               <span className="upcomingMeetup-detailLabel">Currently in: </span>
-              {testimonials.location.name || ""}
+              {location.name}
             </p>
-            <HomeMap note={home.mapsNote} location={testimonials.location} />
+            <HomeMap note={home.mapsNote} location={location} />
           </>
         ) : (
           <p className="upcomingMeetup-detail">{home.noUpcomingMeetupText}</p>

@@ -3,6 +3,7 @@ import "./styles.scss";
 
 export const FooterTemplate = ({ data }) => {
   const { logoImage, socialLinks } = data;
+  if (!data.display) return null;
 
   return (
     <nav className="footer">

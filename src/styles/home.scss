@@ -136,6 +136,7 @@
   &-presenter {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     width: 300px;
     max-width: 100%;
@@ -144,15 +145,27 @@
     margin: 20px;
   }
 
+  &-presenterTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &-presenterImage {
-    height: 130px;
-    border-radius: 100px;
+    height: 80px;
+    border-radius: 50%;
     margin-bottom: 10px;
+    display: flex;
+    align-self: center;
   }
 
   &-presenterName {
     font-weight: 400;
     margin-bottom: 5px;
+    display: flex;
+    a {
+      @include link-border();
+    }
   }
 
   &-presenterPresentationTitle {
@@ -160,10 +173,18 @@
     font-weight: 400;
     align-self: flex-start;
     margin-bottom: 5px;
+    flex-basis: 100%;
+    display: flex;
   }
 
   &-presenterDescription {
     @include small-font;
+    align-self: top;
+  }
+
+  &-presenterSignature {
+    flex-direction: row;
+    margin-top: 1rem;
   }
 
   &-mapWrapper {
@@ -176,6 +197,11 @@
     text-align: center;
     margin-bottom: 10px;
     @include small-font();
+  }
+
+  // temporary
+  &.section {
+    padding-bottom: 20px;
   }
 }
 

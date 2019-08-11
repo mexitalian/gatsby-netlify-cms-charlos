@@ -198,6 +198,11 @@
     margin-bottom: 10px;
     @include small-font();
   }
+
+  // temporary
+  &.section {
+    padding-bottom: 20px;
+  }
 }
 
 .ctaBlock {

@@ -131,3 +131,6 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+
+export { HomePageTemplate };

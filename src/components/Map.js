@@ -11,7 +11,7 @@ class Map extends Component {
     return (
       <GoogleMap
         defaultOptions={{ styles: exampleMapStyles }}
-        defaultZoom={5}
+        defaultZoom={4}
         defaultCenter={{ lat: this.props.latitude, lng: this.props.longitude }}
       >
         <Marker

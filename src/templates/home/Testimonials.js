@@ -44,7 +44,6 @@ const HomeMap = ({ note, location }) => {
           link={location.mapsLink}
           latitude={latitude}
           longitude={longitude}
-          // add an adequate zoom level
         />
       </div>
       {/* <p className="upcomingMeetup-mapNote">{note}</p> */}
@@ -53,7 +52,8 @@ const HomeMap = ({ note, location }) => {
 };
 
 
-const Testimonials = ({ home, testimonials = {} }) => {
+const Testimonials = ({ home, testimonials }) => {
+  if (!testimonials) return null;
   const { presenters: peers = [], location = { name: "" } } = testimonials;
   return (
     <section className="upcomingMeetup  section">

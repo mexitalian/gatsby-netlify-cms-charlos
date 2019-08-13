@@ -8,7 +8,7 @@ const HomePageTemplate = ({ home, upcomingMeetup = null }) => {
   return (
     <>
       <Header home={home} />
-      <Testimonials home={home} testimonals={upcomingMeetup} />
+      <Testimonials home={home} testimonials={upcomingMeetup} />
       {/* <CTA actions={home.callToActions} /> */}
     </>
   );

@@ -4,7 +4,6 @@ import "./styles.scss";
 import CustomLink from "../CustomLink";
 
 export const NavbarTemplate = ({ data }) => {
-  console.log(data);
   if (!data.display) return null;
   return (
     <nav className="navbar">

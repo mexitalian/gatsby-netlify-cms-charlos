@@ -41,7 +41,7 @@
   }
 
   &-tagline-container {
-    width: 400px;
+    max-width: 400px;
     text-align: center;
 
     @include respond-to("small") {

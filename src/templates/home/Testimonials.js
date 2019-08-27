@@ -1,6 +1,7 @@
 import React from "react";
 import Map from "../../components/Map";
 import HeadshotPlaceholder from "../../img/headshot-placeholder.svg";
+import { GOOGLE_MAP_URL } from '../../const.js';
 
 
 const Peer = ({ peer }) => {
@@ -37,7 +38,7 @@ const HomeMap = ({ note, location }) => {
       <div className="upcomingMeetup-mapWrapper">
         <Map
           isMarkerShown
-          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTxauB_VWpo0_8hWELlE3pN59uuHzxD-8&v=3.exp&libraries=geometry,drawing,places"
+          googleMapURL={GOOGLE_MAP_URL}
           loadingElement={<div style={{ height: `100%` }} />}
           containerElement={<div style={{ height: `100%` }} />}
           mapElement={<div style={{ height: `100%` }} />}
